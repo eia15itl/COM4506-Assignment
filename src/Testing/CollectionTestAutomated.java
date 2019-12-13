@@ -56,12 +56,13 @@ class CollectionTestAutomated {
 	void test3Automated() {
 		for (int index = 1000; index > 0 ; index--) {
 			hashGen h = new hashGen();
-			LinkedList<Integer> list = h.linkedListGen(20, 5, 20);
+			LinkedList<Integer> list = h.linkedListGen(400, 5, 20);
 			LinkedList<Integer> list2 = new LinkedList<Integer>();
 		    for (Integer value : list) {
 		    	Integer val = value*2;
 		    	list2.add(val);
 		    }
+		    
 			assertEquals(Collections.min(list)*2,Collections.min(list2));
 		}
 	}

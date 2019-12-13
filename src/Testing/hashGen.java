@@ -40,8 +40,11 @@ public class hashGen {
 		
 		while (hashy.size() <= setSize) { 
 			int ranNum = r.nextInt(maxIntSize);
+			if (ranNum < 0) {
+				ranNum = ranNum*-1;
+			}
 			if (ranNum < minVal) {
-				ranNum = ranNum + Math.abs(ranNum) + Math.abs(r.nextInt());
+				ranNum = ranNum + (minVal-ranNum)+1;
 			}
 			int decider = r.nextInt(20);
 			
